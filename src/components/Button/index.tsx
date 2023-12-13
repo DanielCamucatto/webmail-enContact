@@ -1,3 +1,4 @@
+import { FormEvent } from 'react'
 import { ButtonStyle } from './style'
 
 type ButtonProps = {
@@ -21,7 +22,16 @@ const Button = ({
     background: `linear-gradient(${direction}, ${color1}, ${color2}, ${color3}, ${color4})`,
   }
 
-  return <ButtonStyle style={gradientStyle}>{text}</ButtonStyle>
+  const handleLogin = (ev: FormEvent) => {
+    ev.preventDefault()
+    console.log('Oi')
+  }
+
+  return (
+    <ButtonStyle onClick={handleLogin} style={gradientStyle}>
+      {text}
+    </ButtonStyle>
+  )
 }
 
 export default Button

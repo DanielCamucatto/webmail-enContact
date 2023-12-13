@@ -7,7 +7,7 @@ const Form = () => {
     <form>
       <p className="mb-4">Por favor faça o login com sua conta </p>
       {/* Username input */}
-      <div className="relative mb-4" data-te-input-wrapper-init>
+      <div className="relative mb-4">
         <Input
           label={'Nome de usuário'}
           type={'text'}
@@ -16,7 +16,7 @@ const Form = () => {
       </div>
 
       {/* Password input */}
-      <div className="relative mb-4" data-te-input-wrapper-init>
+      <div className="relative mb-4">
         <Input
           label={'Password'}
           type={'password'}
@@ -35,8 +35,9 @@ const Form = () => {
           color4={'#b44593'}
         />
 
-        {/* Forgot password link */}
-        <a href="#!">Forgot password?</a>
+        <a href="#" className="hover:underline transition duration-300">
+          Esqueceu sua senha?
+        </a>
       </div>
       <Register
         titleRegister={'Ainda não tem uma conta?'}

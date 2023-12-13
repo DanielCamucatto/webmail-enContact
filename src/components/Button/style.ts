@@ -13,4 +13,6 @@ export const ButtonStyle = tw.button`
   uppercase 
   leading-normal 
   text-white 
+  opacity-70
+  transition duration-300 ease-in-out hover:opacity-100
 `
