@@ -4,7 +4,9 @@ export const BrandSection = tw.div`
     text-center
 `
 export const ImgBrand = tw.img`
-  mx-auto w-48  
+  mx-auto 
+  w-48
+  mb-10  
 `
 export const TitleBrand = tw.h4`
     mb-12

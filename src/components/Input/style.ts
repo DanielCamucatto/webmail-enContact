@@ -4,8 +4,8 @@ export const InputStyle = tw.input`
 peer block min-h-[auto]
 w-full 
 rounded 
-border-0 
-bg-transparent 
+border-0
+bg-gray-800 
 px-3 py-[0.32rem] 
 leading-[1.6] 
 outline-none 
