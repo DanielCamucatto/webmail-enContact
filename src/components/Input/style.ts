@@ -1,35 +1,52 @@
 import tw from 'tailwind-styled-components'
 
 export const InputStyle = tw.input`
-peer block min-h-[auto]
 w-full 
+h-14
+block 
+leading-5 
+relative 
+py-2 
+px-4 
 rounded 
-border-0
-bg-gray-800 
-px-3 py-[0.32rem] 
-leading-[1.6] 
-outline-none 
-transition-all 
-duration-200 
-ease-linear 
-focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0
+bg-neutral-10 
+dark:bg-transparent 
+border 
+focus:border-2 
+border-gray-500 
+overflow-x-auto 
+focus:outline-none 
+focus:border-primary-600 
+focus:ring-0 
+dark:text-neutral-200 
+dark:border-gray-400 
+dark:focus:border-primary-200 peer
 `
 
 export const LabelStyle = tw.label`
-pointer-events-none 
 absolute 
-left-3 
-top-0 
-mb-0 
-max-w-[90%] 
-origin-[0_0] 
-truncate 
-pt-[0.37rem]
-leading-[1.6] 
-text-neutral-500 
-transition-all 
-duration-200 
-ease-out 
-peer-focus:-translate-y-[0.9rem] 
-peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary
+tracking-[.03125em] 
+text-neutral-200 
+dark:text-neutral-200 
+bg-neutral-200 
+dark:bg-transparent 
+duration-300 
+transform 
+px-1 
+-translate-y-7
+scale-75 
+top-4 
+z-10 
+origin-[0] 
+left-4 
+peer-focus:left-4 
+peer-focus:text-primary-600 
+dark:peer-focus:text-primary-200 
+peer-placeholder-shown:scale-100 
+peer-placeholder-shown:translate-y-0 
+peer-focus:scale-75 
+peer-focus:-translate-y-7 
+peer-focus:bg-neutral-10 
+dark:peer-focus:bg-gray-900 
+peer-focus:px-1 
 `

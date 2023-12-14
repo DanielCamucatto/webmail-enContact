@@ -1,30 +1,50 @@
+import { FormEvent, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import Register from '../../components/Register'
 
 const Form = () => {
+  const navigate = useNavigate()
+  const [userName, setUserName] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleLogin = (ev: FormEvent) => {
+    ev.preventDefault()
+
+    if (userName === 'admin' && password === '123') {
+      navigate('/home')
+    } else {
+      toast.error('Credenciais inválidas. A senha é admin e 123')
+      setUserName('')
+      setPassword('')
+    }
+  }
+
   return (
-    <form>
+    <form onSubmit={handleLogin}>
       <p className="mb-4">Por favor faça o login com sua conta </p>
-      {/* Username input */}
       <div className="relative mb-4">
         <Input
           label={'Nome de usuário'}
           type={'text'}
-          placeholder={'Digite o nome de usuário'}
+          placeholder={''}
+          value={userName}
+          onChange={setUserName}
         />
       </div>
 
-      {/* Password input */}
       <div className="relative mb-4">
         <Input
           label={'Password'}
           type={'password'}
-          placeholder={'Digite sua senha'}
+          placeholder={''}
+          value={password}
+          onChange={setPassword}
         />
       </div>
 
-      {/* Submit button */}
       <div className="mb-12 pb-1 pt-1 text-center">
         <Button
           text={'login'}
@@ -33,6 +53,7 @@ const Form = () => {
           color2={'#d8363a'}
           color3={'#dd3675'}
           color4={'#b44593'}
+          type="submit"
         />
 
         <a href="#" className="hover:underline transition duration-300">

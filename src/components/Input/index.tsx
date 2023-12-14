@@ -4,14 +4,25 @@ type LabelProps = {
   label: string
   type: string
   placeholder: string
+  value: string
+  onChange: (value: string) => void
 }
 
-const Input = ({ label, type, placeholder }: LabelProps) => {
+const Input = ({ label, type, placeholder, value, onChange }: LabelProps) => {
   return (
-    <>
-      <InputStyle type={type} placeholder={placeholder} />
-      <LabelStyle>{label}</LabelStyle>
-    </>
+    <div className="relative flex flex-col">
+      <div className="relative z-0">
+        <InputStyle
+          type={type}
+          aria-label="inputtext"
+          name="inputtext"
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        />
+        <LabelStyle>{label}</LabelStyle>
+      </div>
+    </div>
   )
 }
 
