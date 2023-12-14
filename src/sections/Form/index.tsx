@@ -4,8 +4,10 @@ import { toast } from 'react-toastify'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 import Register from '../../components/Register'
+import { useAuth } from '../../services/ AuthContext' // Corrigido o caminho
 
 const Form = () => {
+  const { setIsAuthenticated } = useAuth() // Corrigido o nome da propriedade
   const navigate = useNavigate()
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
@@ -14,6 +16,7 @@ const Form = () => {
     ev.preventDefault()
 
     if (userName === 'admin' && password === '123') {
+      setIsAuthenticated(true) // Corrigido o nome da função
       navigate('/home')
     } else {
       toast.error('Credenciais inválidas. A senha é admin e 123')
