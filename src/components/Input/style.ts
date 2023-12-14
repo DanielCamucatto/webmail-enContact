@@ -10,7 +10,8 @@ py-2
 px-4 
 rounded 
 bg-neutral-10 
-dark:bg-transparent 
+dark:bg-transparent
+bg-transparent 
 border 
 focus:border-2 
 border-gray-500 
@@ -18,9 +19,13 @@ overflow-x-auto
 focus:outline-none 
 focus:border-primary-600 
 focus:ring-0 
-dark:text-neutral-200 
-dark:border-gray-400 
-dark:focus:border-primary-200 peer
+dark:text-neutral-200
+text-neutral-200 
+dark:border-gray-400
+border-gray-400 
+dark:focus:border-primary-200
+focus:border-primary-200 
+peer
 `
 
 export const LabelStyle = tw.label`
@@ -29,7 +34,8 @@ tracking-[.03125em]
 text-neutral-200 
 dark:text-neutral-200 
 bg-neutral-200 
-dark:bg-transparent 
+dark:bg-transparent
+bg-gray-900
 duration-300 
 transform 
 px-1 
@@ -41,7 +47,8 @@ origin-[0]
 left-4 
 peer-focus:left-4 
 peer-focus:text-primary-600 
-dark:peer-focus:text-primary-200 
+dark:peer-focus:text-primary-200
+peer-focus:text-primary-200 
 peer-placeholder-shown:scale-100 
 peer-placeholder-shown:translate-y-0 
 peer-focus:scale-75 

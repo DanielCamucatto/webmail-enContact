@@ -1,5 +1,12 @@
+import ToggleTheme from '../../components/ToggleTheme'
+
 const Home = () => {
-  return <h1>Isso é a HOME</h1>
+  return (
+    <>
+      <ToggleTheme />
+      <h1 className="bg-neutral-200 dark:bg-slate-900">Isso é um titulo</h1>
+    </>
+  )
 }
 
 export default Home

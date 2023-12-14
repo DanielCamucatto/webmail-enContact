@@ -19,6 +19,7 @@ items-center
 justify-center 
 text-neutral-800 
 dark:text-neutral-200
+text-neutral-200
 `
 export const BoxLogin = tw.div`
 block 

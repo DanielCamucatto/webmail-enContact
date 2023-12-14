@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import { useAuth } from './services/ AuthContext'
 
 function App() {
-  const { isAuthenticated } = useAuth() // Certifique-se de inicializar o contexto de autenticação
+  const { isAuthenticated } = useAuth()
 
   return (
     <>
