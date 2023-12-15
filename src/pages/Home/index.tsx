@@ -1,11 +1,12 @@
 import ToggleTheme from '../../components/ToggleTheme'
+import ActionList from '../../sections/ActionList'
 
 const Home = () => {
   return (
-    <>
+    <div className="px-10 bg-neutral-200 dark:bg-slate-900 h-screen">
       <ToggleTheme />
-      <h1 className="bg-neutral-200 dark:bg-slate-900">Isso é um titulo</h1>
-    </>
+      <ActionList />
+    </div>
   )
 }
 
