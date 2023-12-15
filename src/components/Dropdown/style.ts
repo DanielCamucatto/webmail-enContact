@@ -2,7 +2,7 @@ import tw from 'tailwind-styled-components'
 
 export const DropdownContainer = tw.div`flex items-center justify-center`
 
-export const DropdownWrapper = tw.div`hidden -mt-32 space-x-10 md:flex`
+export const DropdownWrapper = tw.div`hidden space-x-10 md:flex`
 
 export const DropdownBox = tw.div`relative`
 
