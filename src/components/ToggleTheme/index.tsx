@@ -24,8 +24,8 @@ const ToggleTheme = () => {
   }, [isChecked])
 
   return (
-    <div className="flex flex-row items-center justify-end px-2 justif bg-neutral-100 dark:bg-neutral-900 transition-color duration-500">
-      <p className="font-bold text-neutral-900 dark:text-amber-400 mr-2">
+    <div className="flex flex-row items-center justify-end px-2 justify bg-transparent dark:bg-slate-900 transition-color duration-500">
+      <p className="font-bold text-slate-900 dark:text-slate-200 mr-2">
         {isChecked ? 'Tema dark ativado' : 'Tema light ativado'}
       </p>
 
@@ -38,7 +38,7 @@ const ToggleTheme = () => {
           className={`${
             isChecked
               ? 'bg-amber-400 focus:ring-amber-500'
-              : 'bg-neutral-700 focus:ring-neutral-800'
+              : 'bg-slate-900 focus:ring-neutral-800'
           }relative inline-flex h-[20px] w-[40px] shadow-md cursor-pointer rounded-full items-center focus:outline-none focus:ring-2 focus:ring-offset-2`}
         >
           <span className="sr-only">Toggle Theme</span>
