@@ -18,4 +18,4 @@ export const AvatarLogout = tw.button`block w-full text-left hover:bg-gray-100 p
 
 export const AvatarUserNameBox = tw.div`absolute left-1/2 transform -translate-x-1/2 bottom-[-2.5rem]`
 
-export const AvatarUserNameLink = tw.a`font-bold uppercase mt-2`
+export const AvatarUserNameLink = tw.a`font-bold uppercase mt-2 dark:text-slate-200`

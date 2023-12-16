@@ -19,7 +19,7 @@ const Home: React.FC<HomeProps> = () => {
         >
           <ActionList />
         </ResizableContainer>
-        <div className="w-70%">
+        <div className="w-full">
           <EmailBox />
         </div>
       </div>
